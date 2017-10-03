@@ -63,5 +63,10 @@
     @Html.ActionLink("Volver al listado", "Index")
 </div>
 
-
+<script type="text/javascript">
+    $("#@Html.IdFor(model=>model.OrderDate)").blur(function () {
+        var mays = $(this).val().toUpperCase();
+        $(this).val(mays);
+    });
+</script>
 

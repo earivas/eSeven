@@ -37,15 +37,11 @@ namespace Seven.Controllers
         {
             orderView = Session["orderView"] as OrderView;
 
-            //var dateOrder = Request.Form.AllKeys.Contains("order_orderdate");
-            //var _dateOrder = Request.Form.AllKeys.Contains("order_orderdate");
-            //var myDate = Request.Form.Get("order_orderdate");
-
-            //var xdateOrder = Request["order_orderdate"];
-            //var oDate = Request["order_orderdate"];
-
-
+            //Request camnpos formulario
+            var oDate = DateTime.Parse(Request["Order.OrderDate"]);
             var modelID = int.Parse(Request["ModelID"]);
+       
+
 
             if (modelID == 0)
             {
@@ -98,7 +94,7 @@ namespace Seven.Controllers
                     {
                        
                         ModelID = modelID,
-                        OrderDate = DateTime.Now,
+                        OrderDate = oDate,// DateTime.Now,
                         OrderStatus = OrderStatus.Created,
                        
                         
@@ -114,8 +110,8 @@ namespace Seven.Controllers
                         var orderDetail = new OrderDetail
                         {
                             PageID = item.PageID,
-                            //   TimeStart = item.TimeStart,  //FORMATO DE TIEMPO FALLA
-                            //   TimeEnd = item.TimeEnd,   //   FORMATO DE TIEMPO FALLA
+                            TimeStart = item.TimeStart,  //FORMATO DE TIEMPO FALLA
+                            TimeEnd = item.TimeEnd,   //   FORMATO DE TIEMPO FALLA
                             CreationDate = DateTime.Now,
                             PageName = item.PageName,
                             TipValue = item.TipValue,

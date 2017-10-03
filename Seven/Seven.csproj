@@ -194,6 +194,7 @@
     <Compile Include="Controllers\SupervisorsController.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="ExtendedModel\Class1.cs" />
+    <Compile Include="ExtendedModel\HtmlHelpers.cs" />
     <Compile Include="ExtendedModel\OrderMaster.cs" />
     <Compile Include="ExtendedModel\PagesWS.cs" />
     <Compile Include="Global.asax.cs">
