@@ -1,8 +1,8 @@
-﻿namespace Seven.ExtendedModel
-{
-    public class Class1 
-    {
+﻿//namespace Seven.ExtendedModel
+//{
+//    public class Class1 
+//    {
 
 
-        }
-    }
+//        }
+//    }
