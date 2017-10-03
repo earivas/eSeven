@@ -109,9 +109,10 @@ namespace Seven.Controllers
                     {
                         var orderDetail = new OrderDetail
                         {
+                            
                             PageID = item.PageID,
-                            TimeStart = item.TimeStart,  //FORMATO DE TIEMPO FALLA
-                            TimeEnd = item.TimeEnd,   //   FORMATO DE TIEMPO FALLA
+                            TimeStart = item.TimeStart,//  DateTime.Parse(Request["TimeStart"]),// item.TimeStart,  //FORMATO DE TIEMPO FALLA
+                            TimeEnd = item.TimeEnd, //DateTime.Parse(Request["TimeEnd"]),     //item.TimeEnd,   //   FORMATO DE TIEMPO FALLA
                             CreationDate = DateTime.Now,
                             PageName = item.PageName,
                             TipValue = item.TipValue,

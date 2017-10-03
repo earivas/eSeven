@@ -31,14 +31,15 @@ namespace Seven.Models
         public Decimal Value { get; set; }
 
         [Display(Name = "Start Time")]
-        [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)] 
-        [DataType(DataType.Time)]
-      
-        public DateTime TimeStart { get; set; }
+       [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
+    // [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy HH:mm}", ApplyFormatInEditMode = true)]
+       [DataType(DataType.Time)]
+        public DateTime  TimeStart { get; set; }
 
-        [Display(Name = "End Time")]
-        [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)] 
-        [DataType(DataType.Time)]
+       [Display(Name = "End Time")]
+       [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
+    //   [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy HH:mm}", ApplyFormatInEditMode = true)]
+       [DataType(DataType.Time)]
         public DateTime TimeEnd { get; set; }
 
 

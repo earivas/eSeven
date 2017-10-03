@@ -46,6 +46,15 @@
         <th>
             @Html.DisplayNameFor(model => model.Order.PageName)
         </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Order.TimeStart)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Order.TimeEnd)
+        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Order.TipValue)
         </th>
@@ -55,6 +64,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Order.Total)
         </th>
+
        
     </tr>
 
@@ -64,6 +74,15 @@
             <td>
                 @Html.DisplayFor(modelItem => Model.Pages[i].PageName)
             </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => Model.Pages[i].TimeStart)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => Model.Pages[i].TimeEnd)
+            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => Model.Pages[i].TipValue)
             </td>

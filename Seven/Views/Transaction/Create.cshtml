@@ -45,6 +45,8 @@
                             <td>@Html.DropDownList("OrderDetail[" + i + "].PageID", new SelectList(ViewBag.Pages, "PageID", "PageName", item.PageID))</td>
                             <td>@Html.TextBox("OrderDetail[" + i + "].QtyTokens", item.QtyTokens)</td>
                             <td>@Html.TextBox("OrderDetail[" + i + "].TipValue", item.TipValue)</td>
+                            <td>@Html.TextBox("OrderDetail[" + i + "].TimeStart", item.TimeStart)</td>
+                            <td>@Html.TextBox("OrderDetail[" + i + "].TimeEnd", item.TimeEnd)</td>
                             <td><button type="submit" name="operacion" value="Delete-Detail-@i">Delete</button></td>
                         </tr>
                         i++;
