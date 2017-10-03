@@ -1,0 +1,67 @@
+﻿@model Seven.Models.Order
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>Factura</legend>
+
+        <label>
+            <span>@Html.DisplayNameFor(model => model.ModelID)</span>
+            @Html.EditorFor(model => model.ModelID)
+        </label>
+        <label>
+            <span>@Html.DisplayNameFor(model => model.OrderDate)</span>
+            @Html.EditorFor(model => model.OrderDate)
+        </label>
+        @*<label>
+            <span>@Html.DisplayNameFor(model => model.ClienteNombre)</span>
+            @Html.EditorFor(model => model.ClienteNombre)
+        </label>*@
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Page</th>
+                    <th>QtyTokens</th>
+                    <th>TipValue</th>
+                    <th><button type="submit" name="operacion" data-val="false" value="Add-Detail">Add Detail</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.OrderDetails != null && Model.OrderDetails.Count > 0)
+                {
+                    var i = 0;
+                    foreach (var item in Model.OrderDetails)
+                    {
+                        <tr>
+                            <td>@Html.DropDownList("OrderDetail[" + i + "].PageID", new SelectList(ViewBag.Pages, "PageID", "PageName", item.PageID))</td>
+                            <td>@Html.TextBox("OrderDetail[" + i + "].QtyTokens", item.QtyTokens)</td>
+                            <td>@Html.TextBox("OrderDetail[" + i + "].TipValue", item.TipValue)</td>
+                            <td><button type="submit" name="operacion" value="Delete-Detail-@i">Delete</button></td>
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+
+        <p>
+            <input type="submit" value="Add Order" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Volver al listado", "Index")
+</div>
+
+
+

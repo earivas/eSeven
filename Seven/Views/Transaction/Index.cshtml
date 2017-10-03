@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Seven.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de facturas</h2>
+
+<p>
+    @Html.ActionLink("Nueva Factura", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ModelID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderID)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderID)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.OrderID }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.OrderID }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.OrderID })
+            </td>
+        </tr>
+    }
+
+</table>
+
