@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Seven.Models.ModelContract>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Afp.AfpDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arl.ArlDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Compensation.CompensationDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eps.EpsDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModelType.ModelTypeDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organitation.OrganitationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfitCenter.ProfitCenterDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supervisor.IdentityCard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAdmision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Percent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Afp.AfpDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Arl.ArlDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Compensation.CompensationDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eps.EpsDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelType.ModelTypeDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organitation.OrganitationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfitCenter.ProfitCenterDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supervisor.IdentityCard)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdmision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Percent)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ModelContractID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ModelContractID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ModelContractID })
+        </td>
+    </tr>
+}
+
+</table>

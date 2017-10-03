@@ -1,0 +1,112 @@
+﻿@model Seven.Models.ModelContract
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ModelContract</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Afp.AfpDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Afp.AfpDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arl.ArlDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arl.ArlDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Compensation.CompensationDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compensation.CompensationDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eps.EpsDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eps.EpsDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModelType.ModelTypeDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModelType.ModelTypeDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organitation.OrganitationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organitation.OrganitationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfitCenter.ProfitCenterDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfitCenter.ProfitCenterDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Supervisor.IdentityCard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supervisor.IdentityCard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAdmision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAdmision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Percent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Percent)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

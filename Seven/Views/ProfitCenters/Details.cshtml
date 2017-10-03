@@ -1,0 +1,26 @@
+﻿@model Seven.Models.ProfitCenter
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProfitCenter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfitCenterDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfitCenterDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfitCenterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

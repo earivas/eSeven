@@ -1,0 +1,29 @@
+﻿@model Seven.Models.PageType
+
+@{
+    // ViewBag.Title = "Details";
+    Layout = null;
+}
+
+<h2>Details</h2>
+
+<div>
+    @*<h4>PageType</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTypeDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageTypeDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PageTypeID }) |
+    @*@Html.ActionLink("Back to List", "Index")*@
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</p>
