@@ -14,6 +14,9 @@ namespace Seven.Controllers
         public ActionResult NewOrder()
         {
             var OrderView = new OrderView();
+            //  var fecha
+
+
             OrderView.ModelPerson = new ModelPerson();
             OrderView.Pages = new List<PageOrder>();
             Session["orderView"] = OrderView;
@@ -33,7 +36,14 @@ namespace Seven.Controllers
         public ActionResult NewOrder(OrderView orderView)
         {
             orderView = Session["orderView"] as OrderView;
-            var dateOrder = Request["Order_OrderDate"];
+
+            //var dateOrder = Request.Form.AllKeys.Contains("order_orderdate");
+            //var _dateOrder = Request.Form.AllKeys.Contains("order_orderdate");
+            //var myDate = Request.Form.Get("order_orderdate");
+
+            //var xdateOrder = Request["order_orderdate"];
+            //var oDate = Request["order_orderdate"];
+
 
             var modelID = int.Parse(Request["ModelID"]);
 
@@ -75,6 +85,7 @@ namespace Seven.Controllers
             }
 
             int orderID = 0;
+          
 
             using (var transaction = db.Database.BeginTransaction())
             {
